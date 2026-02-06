@@ -1,0 +1,26 @@
+type ProductCardProps = {
+  name: string;
+  description: string;
+  imageUrl: string;
+};
+
+export default function ProductCard({
+  name,
+  description,
+  imageUrl,
+}: ProductCardProps) {
+  return (
+    <div className="bg-white shadow-md overflow-hidden">
+      <img
+        src={imageUrl}
+        alt={name}
+        className="w-full h-48 object-cover"
+      />
+
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-2">{name}</h3>
+        <p className="text-gray-600 text-sm">{description}</p>
+      </div>
+    </div>
+  );
+}
