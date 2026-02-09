@@ -1,9 +1,9 @@
 
 import Image from "next/image";
-import { GalleryItem } from "@/app/types/gallery";
+import { GalleryItemType } from "@/app/types/gallery";
 
 type Props = {
-  item: GalleryItem;
+  item: GalleryItemType;
 };
 
 export default function GalleryItemComponent({ item }: Props) {

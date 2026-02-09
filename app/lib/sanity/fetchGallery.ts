@@ -1,6 +1,6 @@
 import { client } from "./client";
 import { galleryQuery } from "./queries";
-
-export async function getGalleryItems() {
+import { GalleryItemType } from "@/app/types/gallery";
+export async function getGalleryItems() : Promise<GalleryItemType[]> {
   return client.fetch(galleryQuery);
 }
