@@ -47,7 +47,7 @@ export default function Footer({ text, data }: Props) {
 
         {/* LINEA */}
         <div className="border-t border-neutral-700 mt-10 pt-6 text-sm">
-          <p>{text}</p>
+          <p className="whitespace-pre-wrap">{text}</p>
 
           {/* POLICY */}
           <p className="mt-2 text-xs">

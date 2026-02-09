@@ -18,7 +18,7 @@ export default async function MainLayout({
       <Header phone={data.phone} email={data.email} imageUrl={settings.imageUrl} title={settings.siteTitle} menu={settings.menu} />
       <CookieBanner />
       <main>{children}</main>
-      <Footer text={settings.footerText} data={data} imageUrl={settings.imageUrl} />
+      <Footer text={settings.footerText} data={data} />
  
     </>
   );
