@@ -1,7 +1,7 @@
 
 import ProductCard from "../ui/ProductCard";
 import { getProducts } from "@/app/lib/sanity/fetchProducts";
-
+import { ProductType } from "@/app/types/product";
 export const metadata = {
   title: "Servizi",
   description:
@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default async function ProductsSection() {
-const products = await getProducts();
+const products: ProductType[] = await getProducts();
 
   return (
     <section className="py-20 px-6 max-w-7xl mx-auto">
@@ -18,7 +18,7 @@ const products = await getProducts();
       </h2>
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-        {products.map((product) => (
+        {products.map((product: ProductType) => (
           <ProductCard key={product._id} {...product} />
         ))}
       </div>

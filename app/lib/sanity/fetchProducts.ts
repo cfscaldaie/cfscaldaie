@@ -1,6 +1,6 @@
 import { client } from "./client";
 import { productsQuery } from "./queries";
-
-export async function getProducts() {
+import { ProductType } from "@/app/types/product";
+export async function getProducts():Promise<ProductType[]> {
   return await client.fetch(productsQuery);
 }
