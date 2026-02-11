@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MenuItem } from "@/app/types/siteSettings";
+import Link from "next/link";
 
 type Props = {
   phone: string;
@@ -35,11 +36,14 @@ export default function Header({ phone, email, title, menu, imageUrl }: Props) {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo + Titolo */}
         <div className="flex items-center gap-4">
-          <img
-            src={imageUrl}
-            className="h-16 w-auto object-contain"
-            alt="Logo"
-          />
+          
+          <Link href="/" className="flex items-center">
+            <img
+              src={imageUrl}
+              className="h-16 w-auto object-contain cursor-pointer"
+              alt="Logo"
+            />
+          </Link>
           <div className="h-16 flex items-center">
             <h1 className="font-bold text-xl text-white">{title}</h1>
           </div>
